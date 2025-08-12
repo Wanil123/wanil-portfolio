@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# SPA fallback (si jamais tu préfères le config fichier plutôt que public/_redirects)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
