@@ -30,6 +30,7 @@ import {
   Eye,
   Music,
   ShoppingBag,
+  ShoppingCart,
   Film,
   CloudSun,
   Server,
@@ -307,6 +308,7 @@ function ProjectCard3D({ project, index }: { project: Project, index: number }) 
   const [imageLoaded, setImageLoaded] = useState(false)
 
   const projectIcons: Record<string, React.ElementType> = {
+    'LamiPict': ShoppingCart,
     'Luxe Mode': ShoppingBag,
     'Musike': Music,
     '5:7': Film,
@@ -496,8 +498,25 @@ export default function App() {
   useEffect(() => {
     const savedTheme = localStorage.getItem('wanil-theme')
     const savedLang = localStorage.getItem('wanil-lang')
+
     if (savedTheme) setDark(savedTheme === 'dark')
-    if (savedLang === 'fr' || savedLang === 'en' || savedLang === 'ja') setLang(savedLang as 'fr' | 'en' | 'ja')
+
+    // Si une langue est sauvegardée, l'utiliser
+    if (savedLang === 'fr' || savedLang === 'en' || savedLang === 'ja') {
+      setLang(savedLang as 'fr' | 'en' | 'ja')
+    } else {
+      // Sinon, détecter la langue du navigateur
+      const browserLang = navigator.language || (navigator as { userLanguage?: string }).userLanguage || 'en'
+      const langCode = browserLang.toLowerCase().split('-')[0]
+
+      if (langCode === 'fr') {
+        setLang('fr')
+      } else if (langCode === 'ja') {
+        setLang('ja')
+      } else {
+        setLang('en')
+      }
+    }
   }, [])
 
   useEffect(() => {
@@ -535,6 +554,15 @@ export default function App() {
   }, [cvRelPath])
 
   const projects: Project[] = [
+    {
+      title: t.projects.lamipict.title,
+      role: t.projects.lamipict.role,
+      description: t.projects.lamipict.desc,
+      tech: ['Laravel', 'React', 'Vue.js', 'MySQL', 'Stripe', 'Tailwind CSS'],
+      features: [t.features.stripe, t.features.adminDashboard, t.features.orderManagement, t.features.imageCustomization],
+      links: [{ href: 'https://www.lamipict.com', label: t.common.liveDemo }],
+      image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80',
+    },
     {
       title: t.projects.luxe.title,
       role: t.projects.luxe.role,
@@ -1370,8 +1398,17 @@ const strings = {
       weatherApi: 'Intégration API météo en temps réel',
       geolocation: 'Géolocalisation automatique',
       realtime: 'Données en temps réel',
+      stripe: 'Paiements Stripe intégrés',
+      adminDashboard: 'Tableau de bord administrateur',
+      orderManagement: 'Gestion des commandes',
+      imageCustomization: 'Personnalisation d\'images',
     },
     projects: {
+      lamipict: {
+        title: 'LamiPict — Plateforme E-commerce Web-to-Print',
+        role: 'Full-Stack Developer',
+        desc: 'Plateforme e-commerce complète avec personnalisation d\'images, paiements Stripe et tableau de bord administrateur. En production avec clients réels.'
+      },
       luxe: {
         title: 'Luxe Mode — Boutique E-commerce',
         role: 'Full-Stack Developer',
@@ -1516,8 +1553,17 @@ const strings = {
       weatherApi: 'Real-time weather API integration',
       geolocation: 'Automatic geolocation',
       realtime: 'Real-time data',
+      stripe: 'Stripe payments integration',
+      adminDashboard: 'Admin dashboard',
+      orderManagement: 'Order management',
+      imageCustomization: 'Image customization',
     },
     projects: {
+      lamipict: {
+        title: 'LamiPict — Web-to-Print E-commerce Platform',
+        role: 'Full-Stack Developer',
+        desc: 'Complete e-commerce platform with image customization, Stripe payments and admin dashboard. In production with real customers.'
+      },
       luxe: {
         title: 'Luxe Mode — E-commerce Store',
         role: 'Full-Stack Developer',
@@ -1662,8 +1708,17 @@ const strings = {
       weatherApi: 'リアルタイム天気API連携',
       geolocation: '自動位置情報取得',
       realtime: 'リアルタイムデータ',
+      stripe: 'Stripe決済連携',
+      adminDashboard: '管理ダッシュボード',
+      orderManagement: '注文管理',
+      imageCustomization: '画像カスタマイズ',
     },
     projects: {
+      lamipict: {
+        title: 'LamiPict — Web-to-Print ECプラットフォーム',
+        role: 'フルスタック開発者',
+        desc: '画像カスタマイズ、Stripe決済、管理ダッシュボードを備えた完全なECプラットフォーム。実際の顧客と本番運用中。'
+      },
       luxe: {
         title: 'Luxe Mode — ECサイト',
         role: 'フルスタック開発者',
