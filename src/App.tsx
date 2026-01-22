@@ -477,8 +477,22 @@ function SectionTitle({ title, subtitle, icon }: { title: string, subtitle?: str
 // MAIN APP COMPONENT
 // ============================================
 export default function App() {
+  // Détecter la langue du navigateur au chargement initial
+  const getInitialLang = (): 'fr' | 'en' | 'ja' => {
+    const savedLang = localStorage.getItem('wanil-lang')
+    if (savedLang === 'fr' || savedLang === 'en' || savedLang === 'ja') {
+      return savedLang
+    }
+    // Détecter la langue du navigateur
+    const browserLang = navigator.language || (navigator as { userLanguage?: string }).userLanguage || 'en'
+    const langCode = browserLang.toLowerCase().split('-')[0]
+    if (langCode === 'fr') return 'fr'
+    if (langCode === 'ja') return 'ja'
+    return 'en'
+  }
+
   const [dark, setDark] = useState(true)
-  const [lang, setLang] = useState<'fr' | 'en' | 'ja'>('fr')
+  const [lang, setLang] = useState<'fr' | 'en' | 'ja'>(getInitialLang)
   const [loading, setLoading] = useState(true)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [langMenuOpen, setLangMenuOpen] = useState(false)
@@ -497,26 +511,7 @@ export default function App() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('wanil-theme')
-    const savedLang = localStorage.getItem('wanil-lang')
-
     if (savedTheme) setDark(savedTheme === 'dark')
-
-    // Si une langue est sauvegardée, l'utiliser
-    if (savedLang === 'fr' || savedLang === 'en' || savedLang === 'ja') {
-      setLang(savedLang as 'fr' | 'en' | 'ja')
-    } else {
-      // Sinon, détecter la langue du navigateur
-      const browserLang = navigator.language || (navigator as { userLanguage?: string }).userLanguage || 'en'
-      const langCode = browserLang.toLowerCase().split('-')[0]
-
-      if (langCode === 'fr') {
-        setLang('fr')
-      } else if (langCode === 'ja') {
-        setLang('ja')
-      } else {
-        setLang('en')
-      }
-    }
   }, [])
 
   useEffect(() => {
