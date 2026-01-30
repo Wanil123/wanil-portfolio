@@ -403,7 +403,7 @@ function MeshBackground() {
 // MARQUEE COMPONENT
 // ============================================
 function Marquee() {
-  const techItems = 'React  --  Vue.js  --  Laravel  --  TypeScript  --  Tailwind  --  Python  --  Odoo  --  Figma  --  PostgreSQL  --  PHP  --  '
+  const techItems = 'React  --  Vue.js  --  Laravel  --  JavaScript  --  WordPress  --  TypeScript  --  Tailwind  --  Python  --  Odoo  --  Figma  --  PostgreSQL  --  PHP  --  '
 
   return (
     <div className="relative overflow-hidden py-2">
@@ -1140,6 +1140,8 @@ export default function App() {
                               <span className="text-amber-200">"Vue.js"</span>
                               <span className="text-slate-500">, </span>
                               <span className="text-amber-200">"Laravel"</span>
+                              <span className="text-slate-500">, </span>
+                              <span className="text-amber-200">"JavaScript"</span>
                               <span className="text-slate-300">]</span>
                               <span className="text-slate-500">,</span>
                             </div>
@@ -1574,7 +1576,7 @@ const strings = {
     hero: {
       badge: 'Ouvert aux opportunités',
       title: 'Profil',
-      lead: "Développeur Full-Stack passionné basé à Montréal. Je conçois des applications web complètes avec React, Vue.js côté front et Laravel, PHP côté back. Du design à la base de données !",
+      lead: "Développeur Full-Stack passionné basé à Montréal. Je conçois des applications web complètes avec React, Vue.js, JavaScript côté front et Laravel, PHP, WordPress côté back. Du design à la base de données !",
       pitch: "Approche composant, responsive-first, avec un souci constant de la performance et de l'accessibilité (WCAG).",
     },
     cta: { viewProjects: 'Voir mes projets', contact: 'Me contacter', resume: 'CV' },
@@ -1739,7 +1741,7 @@ const strings = {
     hero: {
       badge: 'Open to opportunities',
       title: 'Profile',
-      lead: 'Passionate Full-Stack developer based in Montreal. I build complete web applications with React, Vue.js on the front and Laravel, PHP on the back. From design to database!',
+      lead: 'Passionate Full-Stack developer based in Montreal. I build complete web applications with React, Vue.js, JavaScript on the front and Laravel, PHP, WordPress on the back. From design to database!',
       pitch: 'Component-driven, responsive-first, with constant attention to performance and accessibility (WCAG).',
     },
     cta: { viewProjects: 'View projects', contact: 'Contact me', resume: 'Resume' },
@@ -1904,7 +1906,7 @@ const strings = {
     hero: {
       badge: '新しい機会を募集中',
       title: 'プロフィール',
-      lead: 'モントリオール在住のフルスタック開発者。React、Vue.jsでフロントエンド、Laravel、PHPでバックエンドを構築。デザインからデータベースまで一貫して対応します。',
+      lead: 'モントリオール在住のフルスタック開発者。React、Vue.js、JavaScriptでフロントエンド、Laravel、PHP、WordPressでバックエンドを構築。デザインからデータベースまで一貫して対応します。',
       pitch: 'コンポーネント駆動開発、レスポンシブファースト、パフォーマンスとアクセシビリティ（WCAG）を常に意識した開発。',
     },
     cta: { viewProjects: 'プロジェクトを見る', contact: 'お問い合わせ', resume: '履歴書' },
