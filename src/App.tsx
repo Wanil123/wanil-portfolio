@@ -764,6 +764,18 @@ export default function App() {
       image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80',
     },
     {
+      title: t.projects.netramark.title,
+      role: t.projects.netramark.role,
+      description: t.projects.netramark.desc,
+      tech: ['FastAPI', 'SQLAlchemy 2.0', 'Pydantic v2', 'Alembic', 'pytest', 'JWT', 'Docker'],
+      features: [t.features.jwtAuth, t.features.abnormalityDetection, t.features.paginationFilters, t.features.asyncApi],
+      links: [
+        { href: 'https://netramark-fastapi-demo.onrender.com', label: t.common.liveDemo },
+        { href: 'https://github.com/Wanil123/Clinical_Trials_Data_API', label: t.common.sourceCode },
+      ],
+      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
+    },
+    {
       title: t.projects.luxe.title,
       role: t.projects.luxe.role,
       description: t.projects.luxe.desc,
@@ -798,18 +810,6 @@ export default function App() {
       features: [t.features.weatherApi, t.features.geolocation, t.features.responsive, t.features.realtime],
       links: [{ href: 'https://your-weather-app.netlify.app/', label: t.common.liveDemo }],
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
-    },
-    {
-      title: t.projects.netramark.title,
-      role: t.projects.netramark.role,
-      description: t.projects.netramark.desc,
-      tech: ['FastAPI', 'SQLAlchemy 2.0', 'Pydantic v2', 'Alembic', 'pytest', 'JWT', 'Docker'],
-      features: [t.features.jwtAuth, t.features.abnormalityDetection, t.features.paginationFilters, t.features.asyncApi],
-      links: [
-        { href: 'https://netramark-fastapi-demo.onrender.com', label: t.common.liveDemo },
-        { href: 'https://github.com/Wanil123/Clinical_Trials_Data_API', label: t.common.sourceCode },
-      ],
-      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
     },
   ]
 
@@ -1100,7 +1100,7 @@ export default function App() {
                         </div>
 
                         {/* Terminal body */}
-                        <div className="p-5 md:p-6 font-mono text-sm space-y-3">
+                        <div className="p-5 md:p-6 font-mono text-xs md:text-sm space-y-3">
                           <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
