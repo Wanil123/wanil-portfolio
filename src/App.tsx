@@ -764,6 +764,15 @@ export default function App() {
       image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80',
     },
     {
+      title: t.projects.weather.title,
+      role: t.projects.weather.role,
+      description: t.projects.weather.desc,
+      tech: ['React', 'API REST', 'CSS3', 'JavaScript'],
+      features: [t.features.weatherApi, t.features.geolocation, t.features.responsive, t.features.realtime],
+      links: [{ href: 'https://your-weather-app.netlify.app/', label: t.common.liveDemo }],
+      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
+    },
+    {
       title: t.projects.netramark.title,
       role: t.projects.netramark.role,
       description: t.projects.netramark.desc,
@@ -801,15 +810,6 @@ export default function App() {
       features: [t.features.booking, t.features.roles, t.features.dashboard, t.features.analytics],
       links: [{ href: 'https://projet-web2-e4.cpsw-fcsei.com/', label: t.common.liveDemo }],
       image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
-    },
-    {
-      title: t.projects.weather.title,
-      role: t.projects.weather.role,
-      description: t.projects.weather.desc,
-      tech: ['React', 'API REST', 'CSS3', 'JavaScript'],
-      features: [t.features.weatherApi, t.features.geolocation, t.features.responsive, t.features.realtime],
-      links: [{ href: 'https://your-weather-app.netlify.app/', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
     },
   ]
 
