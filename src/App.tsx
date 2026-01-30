@@ -785,15 +785,6 @@ export default function App() {
       image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
     },
     {
-      title: t.projects.luxe.title,
-      role: t.projects.luxe.role,
-      description: t.projects.luxe.desc,
-      tech: ['React', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
-      features: [t.features.ecommerce, t.features.animations, t.features.responsive, t.features.darkMode],
-      links: [{ href: 'https://luxe-mode.netlify.app/', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
-    },
-    {
       title: t.projects.musike.title,
       role: t.projects.musike.role,
       description: t.projects.musike.desc,
@@ -801,6 +792,15 @@ export default function App() {
       features: [t.features.musicPlayer, t.features.playlist, t.features.responsive, t.features.animations],
       links: [{ href: 'https://musike-app.netlify.app/', label: t.common.liveDemo }],
       image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=800&q=80',
+    },
+    {
+      title: t.projects.luxe.title,
+      role: t.projects.luxe.role,
+      description: t.projects.luxe.desc,
+      tech: ['React', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
+      features: [t.features.ecommerce, t.features.animations, t.features.responsive, t.features.darkMode],
+      links: [{ href: 'https://luxe-mode.netlify.app/', label: t.common.liveDemo }],
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
     },
     {
       title: t.projects.festival.title,
