@@ -29,16 +29,16 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-violet-500 rounded-full;
+  @apply bg-emerald-500 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-violet-600;
+  @apply bg-emerald-600;
 }
 
 /* Selection style */
 ::selection {
-  @apply bg-violet-500/30 text-violet-900 dark:text-violet-100;
+  @apply bg-emerald-500/30 text-emerald-900 dark:text-emerald-100;
 }
 
 /* Animations globales */
@@ -48,8 +48,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.6); }
 }
 
 @keyframes gradient-x {
@@ -102,7 +102,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-purple-500 to-cyan-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400;
 }
 
 /* Glass effect */
@@ -112,11 +112,11 @@ body {
 
 /* Glow effects */
 .glow-violet {
-  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
 }
 
 /* Magnetic button effect */
@@ -155,4 +155,103 @@ img[data-loaded="false"] {
 
 img[data-loaded="true"] {
   @apply opacity-100;
+}
+
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 transparent;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth 3D transforms */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+[style*="transform"] {
+  will-change: transform;
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Stroke text for marquee */
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px currentColor;
+}
+
+/* Mesh gradient animation */
+@keyframes mesh-move-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes mesh-move-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 30px) scale(1.05); }
+  66% { transform: translate(25px, -40px) scale(1.1); }
+}
+
+@keyframes mesh-move-3 {
+  0%, 100% { transform: translate(0, 0) scale(1.05); }
+  33% { transform: translate(50px, 20px) scale(0.95); }
+  66% { transform: translate(-30px, -30px) scale(1.1); }
+}
+
+@keyframes mesh-move-4 {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  33% { transform: translate(-20px, -40px) scale(1.1); }
+  66% { transform: translate(40px, 30px) scale(1); }
+}
+
+.mesh-blob-1 { animation: mesh-move-1 20s ease-in-out infinite; }
+.mesh-blob-2 { animation: mesh-move-2 25s ease-in-out infinite; }
+.mesh-blob-3 { animation: mesh-move-3 22s ease-in-out infinite; }
+.mesh-blob-4 { animation: mesh-move-4 28s ease-in-out infinite; }
+
+/* Gradient border animation for bento cards */
+@keyframes gradient-border {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animated-border {
+  background-size: 300% 300%;
+  animation: gradient-border 4s ease infinite;
+}
+
+/* Timeline draw animation */
+@keyframes timeline-draw {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(148,163,184,0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
 }

@@ -23,8 +23,8 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
         'pulse-glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(124, 58, 237, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(124, 58, 237, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(16, 185, 129, 0.6)' },
         },
         'gradient-x': {
           '0%, 100%': { backgroundPosition: '0% 50%' },
