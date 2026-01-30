@@ -406,9 +406,9 @@ function Marquee() {
   const techItems = 'React  --  Vue.js  --  Laravel  --  TypeScript  --  Tailwind  --  Python  --  Odoo  --  Figma  --  PostgreSQL  --  PHP  --  '
 
   return (
-    <div className="relative overflow-hidden py-8 md:py-12">
+    <div className="relative overflow-hidden py-2">
       <div className="animate-marquee whitespace-nowrap flex">
-        <span className="stroke-text text-4xl md:text-6xl lg:text-7xl font-mono font-bold text-slate-400 dark:text-slate-600 tracking-wider">
+        <span className="stroke-text text-4xl md:text-6xl lg:text-7xl font-mono font-bold text-slate-300/70 tracking-wider select-none">
           {techItems}{techItems}
         </span>
       </div>
@@ -945,26 +945,6 @@ export default function App() {
                   </div>
 
                   <motion.button
-                    whileHover={{ scale: 1.05, rotate: 15 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="p-2.5 rounded-full border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors"
-                    onClick={() => setDark((d) => !d)}
-                    aria-label="Toggle theme"
-                  >
-                    <AnimatePresence mode="wait">
-                      {dark ? (
-                        <motion.div key="sun" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
-                          <Sun className="h-4 w-4" />
-                        </motion.div>
-                      ) : (
-                        <motion.div key="moon" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }}>
-                          <Moon className="h-4 w-4" />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.button>
-
-                  <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="p-2.5 rounded-full border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors md:hidden"
@@ -1048,7 +1028,9 @@ export default function App() {
 
                       <MagneticButton>
                         <motion.a
-                          href="mailto:maiwanpar@gmail.com"
+                          href="https://mail.google.com/mail/?view=cm&to=maiwanpar@gmail.com&su=Opportunit%C3%A9%20de%20collaboration"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full border border-slate-700 hover:border-emerald-500/50 text-slate-300 hover:text-white transition-all"
@@ -1212,11 +1194,12 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Marquee */}
-              <div className="absolute bottom-0 left-0 right-0">
-                <Marquee />
-              </div>
             </section>
+
+            {/* Marquee */}
+            <div className="pointer-events-none select-none -mt-4 mb-8">
+              <Marquee />
+            </div>
 
             {/* ====== PROJECTS SECTION ====== */}
             <section id="projects" className="mx-auto max-w-7xl px-4 md:px-8 py-24">
@@ -1502,7 +1485,9 @@ export default function App() {
                   <StaggerItem>
                     <MagneticButton className="inline-block">
                       <motion.a
-                        href="mailto:maiwanpar@gmail.com"
+                        href="https://mail.google.com/mail/?view=cm&to=maiwanpar@gmail.com&su=Opportunit%C3%A9%20de%20collaboration"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="inline-flex items-center gap-3 px-10 py-5 text-lg font-bold rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-shadow"
