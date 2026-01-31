@@ -947,7 +947,7 @@ export default function App() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-2.5 rounded-full border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors"
+                    className="hidden md:flex p-2.5 rounded-full border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors"
                     onClick={() => setDark(!dark)}
                     aria-label="Toggle dark mode"
                   >
