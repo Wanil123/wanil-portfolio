@@ -846,7 +846,7 @@ export default function App() {
           <MeshBackground />
           <GrainOverlay />
 
-          <div className="min-h-screen bg-slate-950 text-slate-100">
+          <div className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
             {/* ====== NAVBAR ====== */}
             <motion.header
               initial={{ y: -100 }}
@@ -947,6 +947,16 @@ export default function App() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    className="p-2.5 rounded-full border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors"
+                    onClick={() => setDark(!dark)}
+                    aria-label="Toggle dark mode"
+                  >
+                    {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                  </motion.button>
+
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className="p-2.5 rounded-full border border-slate-700 hover:border-slate-600 hover:bg-slate-800/50 transition-colors md:hidden"
                     onClick={() => setMobileMenuOpen(true)}
                     aria-label="Open menu"
@@ -965,7 +975,7 @@ export default function App() {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                   {/* Left Column — Text content */}
-                  <div className="order-2 lg:order-1">
+                  <div className="order-1 lg:order-1">
                     {/* Greeting line */}
                     <motion.p
                       initial={{ opacity: 0, x: -30 }}
@@ -1081,7 +1091,7 @@ export default function App() {
                     initial={{ opacity: 0, scale: 0.9, y: 30 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8, ease: [0.215, 0.61, 0.355, 1] }}
-                    className="order-1 lg:order-2"
+                    className="order-2 lg:order-2"
                   >
                     <div className="relative group">
                       {/* Glow behind the card */}
@@ -1492,7 +1502,7 @@ export default function App() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-flex items-center gap-3 px-10 py-5 text-lg font-bold rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-shadow"
+                        className="inline-flex items-center gap-2 md:gap-3 px-6 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-shadow"
                       >
                         <Sparkles className="w-6 h-6" />
                         {t.common.workTogether}
@@ -1506,7 +1516,7 @@ export default function App() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-500"
+                  className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm text-slate-500"
                 >
                   <a href="mailto:maiwanpar@gmail.com" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
                     <Mail className="w-4 h-4" /> maiwanpar@gmail.com
