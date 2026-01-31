@@ -761,7 +761,7 @@ export default function App() {
       tech: ['Laravel', 'React', 'Vue.js', 'MySQL', 'Stripe', 'Tailwind CSS'],
       features: [t.features.stripe, t.features.adminDashboard, t.features.orderManagement, t.features.imageCustomization],
       links: [{ href: 'https://www.lamipict.com', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
     },
     {
       title: t.projects.festival.title,
@@ -770,7 +770,7 @@ export default function App() {
       tech: ['Laravel', 'Tailwind', 'MySQL', 'JavaScript', 'Adobe XD'],
       features: [t.features.booking, t.features.roles, t.features.dashboard, t.features.analytics],
       links: [{ href: 'https://film-festival1.netlify.app', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&q=80',
     },
     {
       title: t.projects.musike.title,
@@ -779,7 +779,7 @@ export default function App() {
       tech: ['React', 'CSS3', 'API Integration', 'JavaScript'],
       features: [t.features.musicPlayer, t.features.playlist, t.features.responsive, t.features.animations],
       links: [{ href: 'https://musike-app.netlify.app/', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
     },
     {
       title: t.projects.netramark.title,
@@ -791,7 +791,7 @@ export default function App() {
         { href: 'https://clinical-trials-data-api.onrender.com/', label: t.common.liveDemo },
         { href: 'https://github.com/Wanil123/Clinical_Trials_Data_API', label: t.common.sourceCode },
       ],
-      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
     },
     {
       title: t.projects.weather.title,
@@ -800,7 +800,7 @@ export default function App() {
       tech: ['React', 'API REST', 'CSS3', 'JavaScript'],
       features: [t.features.weatherApi, t.features.geolocation, t.features.responsive, t.features.realtime],
       links: [{ href: 'https://your-weather-ap.netlify.app/', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
     },
     {
       title: t.projects.luxe.title,
@@ -809,7 +809,7 @@ export default function App() {
       tech: ['React', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
       features: [t.features.ecommerce, t.features.animations, t.features.responsive, t.features.darkMode],
       links: [{ href: 'https://luxe-mode.netlify.app/', label: t.common.liveDemo }],
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80',
     },
   ]
 
