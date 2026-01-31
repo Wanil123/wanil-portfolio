@@ -808,7 +808,7 @@ export default function App() {
       description: t.projects.festival.desc,
       tech: ['Laravel', 'Tailwind', 'MySQL', 'JavaScript', 'Adobe XD'],
       features: [t.features.booking, t.features.roles, t.features.dashboard, t.features.analytics],
-      links: [{ href: 'https://projet-web2-e4.cpsw-fcsei.com/', label: t.common.liveDemo }],
+      links: [{ href: 'https://film-festival1.netlify.app', label: t.common.liveDemo }],
       image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
     },
   ]
