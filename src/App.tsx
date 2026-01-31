@@ -769,7 +769,7 @@ export default function App() {
       description: t.projects.weather.desc,
       tech: ['React', 'API REST', 'CSS3', 'JavaScript'],
       features: [t.features.weatherApi, t.features.geolocation, t.features.responsive, t.features.realtime],
-      links: [{ href: 'https://your-weather-app.netlify.app/', label: t.common.liveDemo }],
+      links: [{ href: 'https://your-weather-ap.netlify.app/', label: t.common.liveDemo }],
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
     },
     {
