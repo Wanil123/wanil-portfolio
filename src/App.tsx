@@ -732,7 +732,9 @@ export default function App() {
     return strings.en
   }, [lang])
 
-  const cvRelPath = `${import.meta.env.BASE_URL}cv/Wanil_Parfait_CV_UX_UI.pdf`
+  const cvFileMap = { fr: 'CV_Wanil_Parfait_FR.pdf', en: 'CV_Wanil_Parfait_EN.pdf', ja: 'CV_Wanil_Parfait_JP.pdf' }
+  const cvFileName = cvFileMap[lang]
+  const cvRelPath = `${import.meta.env.BASE_URL}cv/${cvFileName}`
 
   const downloadCV = useCallback(async () => {
     try {
@@ -742,7 +744,7 @@ export default function App() {
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = 'Wanil_Parfait_CV_UX_UI.pdf'
+      a.download = cvFileName
       document.body.appendChild(a)
       a.click()
       a.remove()
@@ -751,7 +753,7 @@ export default function App() {
       const absoluteUrl = new URL(cvRelPath, window.location.origin).toString()
       window.location.href = absoluteUrl
     }
-  }, [cvRelPath])
+  }, [cvRelPath, cvFileName])
 
   const projects: Project[] = [
     {
