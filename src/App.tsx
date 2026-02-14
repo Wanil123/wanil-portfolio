@@ -778,7 +778,7 @@ export default function App() {
         { href: 'http://le-ciel-dore.kesug.com', label: t.common.liveDemo },
         { href: 'https://github.com/Wanil123/le-ciel-dore', label: t.common.sourceCode },
       ],
-      image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
     },
     {
       title: t.projects.lamipict.title,
