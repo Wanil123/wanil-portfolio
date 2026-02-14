@@ -757,6 +757,30 @@ export default function App() {
 
   const projects: Project[] = [
     {
+      title: t.projects.maisonElysee.title,
+      role: t.projects.maisonElysee.role,
+      description: t.projects.maisonElysee.desc,
+      tech: ['WordPress', 'PHP', 'CSS3', 'JavaScript', 'Botiga', 'MySQL'],
+      features: [t.features.bilingual, t.features.customPlugin, t.features.childTheme, t.features.ecommerce],
+      links: [
+        { href: 'https://maison-elysee.infinityfreeapp.com', label: t.common.liveDemo },
+        { href: 'https://github.com/Wanil123/maison-elysee', label: t.common.sourceCode },
+      ],
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80',
+    },
+    {
+      title: t.projects.cielDore.title,
+      role: t.projects.cielDore.role,
+      description: t.projects.cielDore.desc,
+      tech: ['WordPress', 'PHP', 'CSS3', 'JavaScript', 'Botiga', 'MySQL'],
+      features: [t.features.bilingual, t.features.customCPT, t.features.reservationForm, t.features.menuCard],
+      links: [
+        { href: 'http://le-ciel-dore.kesug.com', label: t.common.liveDemo },
+        { href: 'https://github.com/Wanil123/le-ciel-dore', label: t.common.sourceCode },
+      ],
+      image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80',
+    },
+    {
       title: t.projects.lamipict.title,
       role: t.projects.lamipict.role,
       description: t.projects.lamipict.desc,
@@ -1630,36 +1654,52 @@ const strings = {
       abnormalityDetection: 'Détection automatique d\'anomalies',
       paginationFilters: 'Pagination & filtres avancés',
       asyncApi: 'API async complète',
+      bilingual: 'Système bilingue FR/EN',
+      customCPT: 'Types de contenu personnalisés',
+      reservationForm: 'Formulaire de réservation',
+      menuCard: 'Carte du menu dynamique',
+      childTheme: 'Thème enfant WordPress',
+      customPlugin: 'Plugin WordPress custom',
     },
     projects: {
+      maisonElysee: {
+        title: 'Maison Élysée — Boutique Mode Luxe',
+        role: 'Développeur WordPress',
+        desc: 'Vitrine e-commerce WordPress pour une maison de haute couture fictive. Thème enfant Botiga, plugin sur mesure avec shortcodes, design élégant et navigation bilingue FR/EN.',
+      },
+      cielDore: {
+        title: 'Le Ciel Doré — Restaurant 5 Étoiles',
+        role: 'Développeur WordPress',
+        desc: 'Site vitrine WordPress pour un restaurant gastronomique méditerranéen fictif. Types de contenu personnalisés, carte des menus par catégorie, réservation en ligne et interface bilingue FR/EN.',
+      },
       lamipict: {
         title: 'LamiPict — Plateforme E-commerce Web-to-Print',
-        role: 'Full-Stack Developer',
+        role: 'Développeur Full-Stack',
         desc: 'Plateforme e-commerce complète avec personnalisation d\'images, paiements Stripe et tableau de bord administrateur. En production avec clients réels.'
       },
       luxe: {
         title: 'Luxe Mode — Boutique E-commerce',
-        role: 'Full-Stack Developer',
+        role: 'Développeur Full-Stack',
         desc: 'Boutique de mode haut de gamme avec interface élégante, animations fluides et expérience utilisateur premium.'
       },
       musike: {
         title: 'Musike — Application Streaming',
-        role: 'Full-Stack Developer',
+        role: 'Développeur Full-Stack',
         desc: "Application de streaming musical avec lecteur interactif, gestion de playlists et interface moderne."
       },
       festival: {
         title: '5:7 Festival de Films',
-        role: 'Full-Stack Developer',
+        role: 'Développeur Full-Stack',
         desc: 'Plateforme de réservations pour festival de films avec gestion des rôles et analytics intégrés.'
       },
       weather: {
         title: 'Weather App — Application Météo',
-        role: 'Full-Stack Developer',
+        role: 'Développeur Full-Stack',
         desc: 'Application météo en temps réel avec géolocalisation, prévisions détaillées et interface intuitive.'
       },
       netramark: {
         title: 'Clinical Trials Data API',
-        role: 'Back-End Developer',
+        role: 'Développeur Back-End',
         desc: 'API REST pour la gestion de données d\'essais cliniques — patients, biomarqueurs et analyses de laboratoire avec détection automatique des anomalies.'
       },
     },
@@ -1795,8 +1835,24 @@ const strings = {
       abnormalityDetection: 'Automated abnormality detection',
       paginationFilters: 'Pagination & advanced filters',
       asyncApi: 'Full async API',
+      bilingual: 'Bilingual FR/EN system',
+      customCPT: 'Custom post types',
+      reservationForm: 'Reservation form',
+      menuCard: 'Dynamic menu card',
+      childTheme: 'WordPress child theme',
+      customPlugin: 'Custom WordPress plugin',
     },
     projects: {
+      maisonElysee: {
+        title: 'Maison Élysée — Luxury Fashion Boutique',
+        role: 'WordPress Developer',
+        desc: 'WordPress e-commerce showcase for a fictional haute couture fashion house. Botiga child theme, custom plugin with shortcodes, elegant design and seamless FR/EN bilingual navigation.',
+      },
+      cielDore: {
+        title: 'Le Ciel Doré — 5-Star Restaurant',
+        role: 'WordPress Developer',
+        desc: 'WordPress showcase for a fictional Mediterranean fine-dining restaurant. Custom post types for dishes & events, categorized menu card, online reservation system and FR/EN bilingual interface.',
+      },
       lamipict: {
         title: 'LamiPict — Web-to-Print E-commerce Platform',
         role: 'Full-Stack Developer',
@@ -1960,8 +2016,24 @@ const strings = {
       abnormalityDetection: '異常自動検出',
       paginationFilters: 'ページネーション＆高度なフィルター',
       asyncApi: '完全非同期API',
+      bilingual: 'バイリンガルFR/ENシステム',
+      customCPT: 'カスタム投稿タイプ',
+      reservationForm: '予約フォーム',
+      menuCard: 'ダイナミックメニューカード',
+      childTheme: 'WordPress子テーマ',
+      customPlugin: 'カスタムWordPressプラグイン',
     },
     projects: {
+      maisonElysee: {
+        title: 'Maison Élysée — 高級ファッションブティック',
+        role: 'WordPress開発者',
+        desc: '架空のオートクチュールブランド向けWordPress ECショーケース。Botiga子テーマ、ショートコード付きカスタムプラグイン、洗練されたデザインとFR/ENバイリンガルナビゲーション。',
+      },
+      cielDore: {
+        title: 'Le Ciel Doré — 五つ星レストラン',
+        role: 'WordPress開発者',
+        desc: '架空の地中海高級レストラン向けWordPressショーケース。料理・イベント用カスタム投稿タイプ、カテゴリー別メニューカード、オンライン予約システムとFR/ENバイリンガルインターフェース。',
+      },
       lamipict: {
         title: 'LamiPict — Web-to-Print ECプラットフォーム',
         role: 'フルスタック開発者',
